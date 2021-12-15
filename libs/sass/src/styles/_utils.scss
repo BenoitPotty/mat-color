@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $colorKeys: 50 100 200 300 400 500 600 700 800 900;
 $opacityKeys: 80 40 20 12 8 4;
 $linear-channel-values:
@@ -278,7 +280,7 @@ $linear-channel-values:
   $backLum: luminance($back) + .05;
   $foreLum: luminance($front) + .05;
 
-  @return max($backLum, $foreLum) / min($backLum, $foreLum);
+  @return math.div(max($backLum, $foreLum), min($backLum, $foreLum));
 }
 
 /**
