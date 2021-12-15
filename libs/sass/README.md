@@ -51,3 +51,9 @@ $primary: mat-palette(generate-mat-color(#b9ffaf));
 <a href="https://www.buymeacoffee.com/katsuba" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" height="41" width="174" style="box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
 </a>
+
+### Bug fix
+
+Changed all the division in `*.scss` by `math.div()` function, as regular division will be deprecated in Dart Sass 2.0.0. Those divisions where producing warnings at complition. 
+
+Used the tool [sass-migrator](https://www.npmjs.com/package/sass-migrator)
